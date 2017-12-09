@@ -1,0 +1,8 @@
+{
+  "name": "recipe-shopping",
+  "app_id": "5a7c825b",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
