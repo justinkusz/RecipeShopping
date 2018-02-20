@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Edit Ingredient</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="ingredient.name" placeholder="ingredient"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating >Amount</ion-label>
+      <ion-input type="number" [(ngModel)]="ingredient.amount"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Unit</ion-label>
+      <ion-select interface="popover" [(ngModel)]="ingredient.unit" placeholder="oz, cup, etc">
+        <ion-option [value]="unit" *ngFor="let unit of units">{{unit}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <button float-right ion-button clear color="primary" (click)="dismiss(ingredient)">OK</button>
+  <button float-left ion-button clear color="danger" (click)="dismiss()">Cancel</button>
+</ion-content>

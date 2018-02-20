@@ -1,0 +1,23 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Recipes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card *ngFor="let recipe of recipeList" (click)="showRecipeDetail(recipe)">
+    <ion-card-header>{{recipe.name}}</ion-card-header>
+    <ion-card-content>{{recipe.description}}</ion-card-content>
+  </ion-card>
+
+  <ion-fab bottom right>
+    <button ion-fab mini (click)="addRecipe()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
